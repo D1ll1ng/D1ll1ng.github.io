@@ -35,6 +35,15 @@
 		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
 		it with JavaScript disabled!
 	</p>
+	<h2>Her er en overskrift omkring os</h2>
+	<p>
+		Der er mange ting man kan gøre på en rejse <a href="https://google.com">Sport</a> f.eks. Men ud over det er der en håndfuld af andre aktiviter som i kan hygge jer med Bajer Wisky se værdighedder.<br>
+	</p>
+	<p>
+		Ud over det er der mange fede ting at lave det her er sku drømmen. uden lige bom bom.
+	</p>
+	<div class="gallery-images"><img src="https://assets.maxroll.gg/wordpress/D2_Amazon.jpg" style="width:800px; height:200px"></div>
+
 </div>
 
 <style>

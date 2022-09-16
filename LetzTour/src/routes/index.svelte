@@ -14,6 +14,7 @@
 	import Counter from '$lib/components/counter/Counter.svelte';
 	import { session } from '$app/stores';
 	import type { Count } from '$lib/models/Count';
+import Hero from '$lib/components/basic/Hero.svelte';
 	export let counterData: Partial<Count>;
 </script>
 
@@ -31,8 +32,10 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		
 	</h1>
+
+	<Hero/>
 
 	<h2>
 		try editing <strong>src/routes/index.svelte</strong>
