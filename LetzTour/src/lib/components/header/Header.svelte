@@ -6,7 +6,7 @@
 <header>
 	<div class="corner">
 		<a sveltekit:prefetch href="/">
-			<img src={logo} alt="SvelteKit" />
+			<img src={logo} alt="LetzTour" />
 		</a>
 	</div>
 
@@ -76,8 +76,8 @@
 		margin: 0;
 		height: 3em;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: right;
+		align-items: right;
 		list-style: none;
 		background: var(--background);
 		background-size: contain;
