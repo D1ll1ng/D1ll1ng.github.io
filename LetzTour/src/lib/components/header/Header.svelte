@@ -1,23 +1,29 @@
 <script lang="ts">
 	import { page, session } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from './logo.png';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<a sveltekit:prefetch href="/">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
+
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
+			<li class:active={$page.url.pathname === '/book'}>
+				<a sveltekit:prefetch href="/book">Book</a>
+			</li>
+			<li class:active={$page.url.pathname === '/om'}>
+				<a sveltekit:prefetch href="/om">Om</a>
+			</li>
+			<li class:active={$page.url.pathname === '/kontakt'}>
+				<a sveltekit:prefetch href="/kontakt">Kontakt</a>
+			</li>
+			<li class:active={$page.url.pathname === '/login'}>
+				<a sveltekit:prefetch href="/login">Login</a>
 			</li>
 			{#if $session.user}
 				<li class:active={$page.url.pathname === '/counter'}>
@@ -28,9 +34,6 @@
 				</li>
 			{/if}
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
 
 	<div class="corner">
@@ -42,43 +45,31 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		--background: rgba(255, 255, 255, 1);
+		background: var(--background);
 	}
-
 	.corner {
-		width: 3em;
-		height: 3em;
+		width: 4em;
+		height: 3.5em;
+		margin: 1em;
 	}
-
 	.corner a {
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		align-items: left;
+		justify-content: left;
 		width: 100%;
 		height: 100%;
 	}
-
 	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+		width: 20em;
+		height: 3em;
+		object-fit: center;
 	}
-
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
 	}
-
-	path {
-		fill: var(--background);
-	}
-
 	ul {
 		position: relative;
 		padding: 0;
@@ -91,12 +82,10 @@
 		background: var(--background);
 		background-size: contain;
 	}
-
 	li {
 		position: relative;
 		height: 100%;
 	}
-
 	li.active::before {
 		--size: 6px;
 		content: '';
@@ -108,7 +97,6 @@
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--accent-color);
 	}
-
 	nav a {
 		display: flex;
 		height: 100%;

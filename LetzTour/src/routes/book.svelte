@@ -42,7 +42,7 @@
 	<p>
 		Ud over det er der mange fede ting at lave det her er sku drømmen. uden lige bom bom.
 	</p>
-	<div class="gallery-images"><img src="https://assets.maxroll.gg/wordpress/D2_Amazon.jpg" style="width:800px; height:200px"></div>
+	<div class="gallery-images"><img src="https://assets.maxroll.gg/wordpress/D2_Amazon.jpg" alt="content image" style="width:800px; height:200px"></div>
 
 </div>
 
