@@ -10,34 +10,36 @@
 		</a>
 	</div>
 
-	<nav>
+	<div>
 
-		<ul>
-			<li class:active={$page.url.pathname === '/book'}>
-				<a sveltekit:prefetch href="/book">Book</a>
-			</li>
-			<li class:active={$page.url.pathname === '/om'}>
-				<a sveltekit:prefetch href="/om">Om</a>
-			</li>
-			<li class:active={$page.url.pathname === '/kontakt'}>
-				<a sveltekit:prefetch href="/kontakt">Kontakt</a>
-			</li>
-			<li class:active={$page.url.pathname === '/login'}>
-				<a sveltekit:prefetch href="/login">Login</a>
-			</li>
-			{#if $session.user}
-				<li class:active={$page.url.pathname === '/counter'}>
-					<a sveltekit:prefetch href="/counter">Counter</a>
-				</li>
-				<li class:active={$page.url.pathname === '/todos'}>
-					<a sveltekit:prefetch href="/todos">Todos</a>
-				</li>
-			{/if}
-		</ul>
-	</nav>
+	</div>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<nav>
+
+			<ul>
+				<li class:active={$page.url.pathname === '/book'}>
+					<a sveltekit:prefetch href="/book">Book</a>
+				</li>
+				<li class:active={$page.url.pathname === '/om'}>
+					<a sveltekit:prefetch href="/om">Om</a>
+				</li>
+				<li class:active={$page.url.pathname === '/kontakt'}>
+					<a sveltekit:prefetch href="/kontakt">Kontakt</a>
+				</li>
+				<li class:active={$page.url.pathname === '/login'}>
+					<a sveltekit:prefetch href="/login">Login</a>
+				</li>
+				{#if $session.user}
+					<li class:active={$page.url.pathname === '/counter'}>
+						<a sveltekit:prefetch href="/counter">Counter</a>
+					</li>
+					<li class:active={$page.url.pathname === '/todos'}>
+						<a sveltekit:prefetch href="/todos">Todos</a>
+					</li>
+				{/if}
+			</ul>
+		</nav>
 	</div>
 </header>
 
@@ -67,7 +69,7 @@
 	}
 	nav {
 		display: flex;
-		justify-content: center;
+		justify-content: right;
 
 	}
 	ul {

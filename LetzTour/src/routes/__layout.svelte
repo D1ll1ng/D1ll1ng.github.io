@@ -23,18 +23,29 @@
 <script lang="ts">
 	import Header from '$lib/components/header/Header.svelte';
 	import Auth from '$lib/components/auth/Auth.svelte';
+	import logo from '$lib/components//header/logo.png';
 	import '../app.css';
+	
 </script>
 
 <Header />
 
 <main>
-	<Auth />
-	<slot />
+	<!--<Auth />-->
+	<slot /> 
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<div class="corner">
+		<p>Footer CUNTENTen</p>
+	</div>
+	<div>
+	</div>
+	<div class="corner">
+				<a sveltekit:prefetch href="/">
+			<img src={logo} alt="LetzTour" />
+		</a>
+	</div>
 </footer>
 
 <style>
@@ -49,18 +60,42 @@
 		box-sizing: border-box;
 	}
 
+	footer a {
+	}
 	footer {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+		justify-content: space-between;
+		--background: rgb(46, 46, 46);
+		background: var(--background);
+		width: 100vw;
+		color: white;
 	}
-
-	footer a {
+	.corner {
+		display: flex;
+		justify-content:right;
+		margin: 2em;
+	}
+	.corner a {
+		color: white;
 		font-weight: bold;
 	}
-
+	.corner p {
+		display: flex;
+		align-items: left;
+		justify-content: left;
+		width: 100%;
+		height: 100%;
+		color: white;
+	}
+	.corner img {
+		width: 20em;
+		height: 3em;
+		object-fit: center;
+		justify-content: right;
+	}
+	a:hover {
+		color: var(--accent-color);
+	}
 	@media (min-width: 480px) {
 		footer {
 			padding: 40px 0;

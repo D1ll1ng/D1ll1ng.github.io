@@ -19,10 +19,8 @@
 
 <style>
 	.hero {
-		padding: 0 -50%;
 		height: 480px;
 		background-color: rgb(158, 158, 158);
-		background-position: cover;
 		text-align: center;
 		color: white;
 		width: 100vw

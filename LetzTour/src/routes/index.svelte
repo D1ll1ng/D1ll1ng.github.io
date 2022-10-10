@@ -15,6 +15,7 @@
 	import { session } from '$app/stores';
 	import type { Count } from '$lib/models/Count';
 	import Hero from '$lib/components/basic/Hero.svelte';
+	import Footer from '$lib/components/footer/Footer.svelte';
 	export let counterData: Partial<Count>;
 </script>
 
@@ -24,22 +25,11 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
-
-		
-	</h1>
-
 	<Hero/>
 
-	<h2>
+	<h1>
 		<span class="headline">Herre tur -</span> Vores testede ture!
-	</h2>
+	</h1>
 	<div class="ProductOverview">
 		<div class="ProductOverview-FirstRow">
 			<a href="http://" rel="noopener noreferrer"><span><b>Danmark</b> - København</span></a>
@@ -57,6 +47,7 @@
 	{/if}
 </section>
 
+
 <style>
 	section {
 		display: flex;
@@ -65,11 +56,8 @@
 		align-items: center;
 		flex: 1;
 	}
+
 	h1 {
-		width: 100%;
-		color: #fff;
-	}
-	h2 {
 		display: block;
 		font-size: 1em;
 		color: #3A798C;
