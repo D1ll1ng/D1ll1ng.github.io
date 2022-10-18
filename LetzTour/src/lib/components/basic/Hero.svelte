@@ -1,4 +1,7 @@
 <div class="hero">
+	<div class="hero-bg">
+		<img src="/media/dublin-cover.webp" alt="">
+	</div>
 		<h1>Klar på en fantastisk heretur?</h1>
 		<p>Søg her og få forslag på hereture… Tilpas din søgning og lav der perfekt til din gruppe</p>
 		<form action="post">
@@ -18,15 +21,30 @@
 </div>
 
 <style>
-	.hero {
-		height: 480px;
-		background-color: rgb(158, 158, 158);
-		text-align: center;
-		color: white;
-		width: 100vw
+	.hero{
+		position: relative;
+		height:480px;
+		display: flex;
+		align-items: center;
+		
+	}
+	.hero-bg{
+		position: absolute;
+		height:480px;
+		width: 100vw;
+		margin:0 auto;
+		z-index: -1;
+	}
+	.hero-bg img{
+		position: absolute;
+		height:100%;
+		width: 100%;
+		object-fit: cover;
 	}
 	.hero h1, .hero p{
 		color: white;
+		margin-top: 0;
+		padding: 20px 0;
 	}
 	.hero form {
 		display: flex;

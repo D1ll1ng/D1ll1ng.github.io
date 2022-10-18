@@ -15,7 +15,6 @@
 	import { session } from '$app/stores';
 	import type { Count } from '$lib/models/Count';
 	import Hero from '$lib/components/basic/Hero.svelte';
-	import Footer from '$lib/components/footer/Footer.svelte';
 	export let counterData: Partial<Count>;
 </script>
 
@@ -23,13 +22,14 @@
 	<title>Forside</title>
 	<meta name="description" content="Herre tur hjemmeside" />
 </svelte:head>
-
+<Hero/>
 <section>
-	<Hero/>
+	<div class="container">	
+		<h2>
+			<span class="headline">Herre tur -</span> Vores testede ture!
+		</h2>
+	</div>
 
-	<h1>
-		<span class="headline">Herre tur -</span> Vores testede ture!
-	</h1>
 	<div class="ProductOverview">
 		<div class="ProductOverview-FirstRow">
 			<a href="http://" rel="noopener noreferrer"><span><b>Danmark</b> - København</span></a>
@@ -41,12 +41,31 @@
 			<a href="http://" rel="noopener noreferrer"><span><b>Findland</b> - Lorem</span></a>
 		</div>
 	</div>
-
 	{#if $session.user && counterData}
 		<Counter {counterData} />
 	{/if}
 </section>
 
+<section class="singleProduct">
+	<div class="col1">
+		<h2>
+			Dublin Tur
+		</h2>
+		<p >Her er en kort tisser af vores smeller fede dublin tur!</p> 
+		<div class="SingleProductImages-Big">
+			<img loading="lazy" style="width:512px; height:512px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
+		</div>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi id ipsa corporis distinctio? Quibusdam, atque? Sapiente, iste qui. Amet numquam aperiam, beatae alias vero tempore. Expedita molestias autem odit provident!</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi id ipsa corporis distinctio? Quibusdam, atque? Sapiente, iste qui. Amet numquam aperiam, beatae alias vero tempore. Expedita molestias autem odit provident!</p>
+	</div>
+	<div class="col2">
+		<div class="SingleProductImages-3Small">
+			<img loading="lazy" style="width:312px; height:312px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
+			<img loading="lazy" style="width:256px; height:256px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
+			<img loading="lazy" style="width:200px; height:200px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
+		</div>
+	</div>
+</section>
 
 <style>
 	section {
@@ -55,40 +74,32 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
+		padding: 40px;
 	}
-
-	h1 {
+	h2 {
 		display: block;
 		font-size: 1em;
 		color: #3A798C;
 		font-weight: 500;
-		text-align: left;
 		float: left;
+		width: 100%;
+	}
+	.container{
+		max-width: 905px;
+		width: 100%;
+	}
+	.container span{
+		margin-bottom: 5px;
 	}
 	span.headline {
 		font-size: 2em;
 		font-weight: 700;
+		padding-right: 8px;
 	}
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-
-
 	.ProductOverview-FirstRow,.ProductOverview-SecondRow{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding: 5px;
 	}
 	.ProductOverview-FirstRow a:hover,.ProductOverview-SecondRow a:hover{
 		cursor: pointer;
@@ -106,22 +117,79 @@
 		object-fit: cover;
 		object-position: bottom;
 		text-decoration: none;
-		width: 50%;
-		height: 250px;
+		width: 48.5%;
+		height: 300px;
 		min-width: 450px;
-		background: rgb(19,169,171);
-		background: linear-gradient(90deg, rgba(19,169,171,1) 0%, rgba(0,161,255,1) 100%);
+		margin: .2em;
+	}
+	.ProductOverview-FirstRow a:nth-child(1){
 
+		background-image: url("../media/dublin-square01.webp");
+		background-size: cover;
+	}
+	.ProductOverview-FirstRow a:nth-child(2){
+
+		background-image: url("../media/dublin-square01.webp");
+		background-size: cover;
 	}
 	.ProductOverview-SecondRow a{
 		display: block;
 		object-fit: cover;
 		object-position: bottom;
 		text-decoration: none;
-		width: 33%;
+		width: 30%;
 		height: 250px;
-		min-width: 300px;
-		background: rgb(46,171,19);
-		background: linear-gradient(90deg, rgba(46,171,19,1) 0%, rgba(0,255,134,1) 100%);
+		min-width: 298px;
+		margin: .2em;
+	}
+	.ProductOverview-SecondRow a:nth-child(1){
+		background-image: url("../media/dublin-square01.webp");
+		background-size: cover;
+	}
+	.ProductOverview-SecondRow a:nth-child(2){
+		background-image: url("../media/dublin-square01.webp");
+		background-size: cover;
+	}
+	.ProductOverview-SecondRow a:nth-child(3){
+		background-image: url("../media/dublin-square01.webp");
+		background-size: cover;
+	}
+
+	/*Second element with orange bg*/
+
+	.singleProduct{
+		background: linear-gradient(129deg, rgb(225, 198, 60) 0%, rgb(225, 160, 60) 100%);
+		display: flex;
+		flex-direction: row;
+		padding: 40px 0;
+	}
+	.col1{
+		display: flex;
+		justify-content: right;
+		flex-wrap: wrap;
+		width: 29.7vw;
+	}
+	.col1 img{
+		padding-bottom: 40px;
+	}
+	.col1 h2{
+		text-align: right;
+		color: white;
+		font-size: 4em;
+		margin: 40px 20px 0 0;
+
+	}
+	.col1 p{
+		padding: 0 0 1em 0;
+		font-size: 1.2em;
+		color: white;
+		margin: 0 20px 0 0;
+	}
+	.col2{
+		width: 19vw;
+	}
+	.col2 .SingleProductImages-3Small{
+		display: flex;
+		flex-direction: column;
 	}
 </style>
