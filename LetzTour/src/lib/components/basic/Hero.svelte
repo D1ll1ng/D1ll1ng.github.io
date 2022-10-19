@@ -26,7 +26,7 @@
 		height:480px;
 		display: flex;
 		align-items: center;
-		
+		flex-direction: column;
 	}
 	.hero-bg{
 		position: absolute;

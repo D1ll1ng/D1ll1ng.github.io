@@ -15,6 +15,7 @@
 	import { session } from '$app/stores';
 	import type { Count } from '$lib/models/Count';
 	import Hero from '$lib/components/basic/Hero.svelte';
+	import SingleView from '$lib/components/basic/SingleView.svelte';
 	export let counterData: Partial<Count>;
 </script>
 
@@ -22,7 +23,9 @@
 	<title>Forside</title>
 	<meta name="description" content="Herre tur hjemmeside" />
 </svelte:head>
+
 <Hero/>
+
 <section>
 	<div class="container">	
 		<h2>
@@ -33,7 +36,7 @@
 	<div class="ProductOverview">
 		<div class="ProductOverview-FirstRow">
 			<a href="http://" rel="noopener noreferrer"><span><b>Danmark</b> - København</span></a>
-			<a href="http://" rel="noopener noreferrer"><span><b>Irland</b> - Dublin</span></a>
+			<a href="http://" rel="noopener noreferrer" style="border-radius: 0 80px 0 0;"><span><b>Irland</b> - Dublin</span></a>
 		</div>
 		<div class="ProductOverview-SecondRow">
 			<a href="http://" rel="noopener noreferrer"><span><b>Belgien</b> - Lorem</span></a>
@@ -46,25 +49,16 @@
 	{/if}
 </section>
 
-<section class="singleProduct">
-	<div class="col1">
-		<h2>
-			Dublin Tur
-		</h2>
-		<p >Her er en kort tisser af vores smeller fede dublin tur!</p> 
-		<div class="SingleProductImages-Big">
-			<img loading="lazy" style="width:512px; height:512px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
-		</div>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi id ipsa corporis distinctio? Quibusdam, atque? Sapiente, iste qui. Amet numquam aperiam, beatae alias vero tempore. Expedita molestias autem odit provident!</p>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi id ipsa corporis distinctio? Quibusdam, atque? Sapiente, iste qui. Amet numquam aperiam, beatae alias vero tempore. Expedita molestias autem odit provident!</p>
-	</div>
-	<div class="col2">
-		<div class="SingleProductImages-3Small">
-			<img loading="lazy" style="width:312px; height:312px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
-			<img loading="lazy" style="width:256px; height:256px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
-			<img loading="lazy" style="width:200px; height:200px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
-		</div>
-	</div>
+<SingleView/>
+
+<section class="testimonial">
+	<p>"build our style. Learn how to use these documentation 
+		pages in combination with Framer to start building 
+		new projects in no-time."</p>
+		<span>
+			<img loading="lazy" style="width:50px; height:50px; padding: 0 15px 0 0;" src="/media/dublin-square02.webp" alt="et billede af Jens Jensen, man kan se han er en kraftig mand">
+			<p>Jens Jensen <br> En kraftig mand</p>
+		</span>
 </section>
 
 <style>
@@ -75,6 +69,7 @@
 		align-items: center;
 		flex: 1;
 		padding: 40px;
+		margin: 40px 0;
 	}
 	h2 {
 		display: block;
@@ -154,42 +149,22 @@
 		background-image: url("../media/dublin-square01.webp");
 		background-size: cover;
 	}
-
-	/*Second element with orange bg*/
-
-	.singleProduct{
-		background: linear-gradient(129deg, rgb(225, 198, 60) 0%, rgb(225, 160, 60) 100%);
+	.testimonial{
 		display: flex;
-		flex-direction: row;
-		padding: 40px 0;
+		max-width: 500px;
+		font-size: 1.4em;
+		align-items: flex-start;
+		margin: 40px auto;
 	}
-	.col1{
+	.testimonial span{
 		display: flex;
-		justify-content: right;
-		flex-wrap: wrap;
-		width: 29.7vw;
+		font-size: 1rem;
+		color: rgb(40, 40, 40);
+		margin-top: 20px;
 	}
-	.col1 img{
-		padding-bottom: 40px;
+	.testimonial p{
+		margin: 0;
 	}
-	.col1 h2{
-		text-align: right;
-		color: white;
-		font-size: 4em;
-		margin: 40px 20px 0 0;
 
-	}
-	.col1 p{
-		padding: 0 0 1em 0;
-		font-size: 1.2em;
-		color: white;
-		margin: 0 20px 0 0;
-	}
-	.col2{
-		width: 19vw;
-	}
-	.col2 .SingleProductImages-3Small{
-		display: flex;
-		flex-direction: column;
-	}
+	
 </style>
