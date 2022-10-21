@@ -37,7 +37,7 @@
 		display: flex;
 		justify-content: right;
 		flex-wrap: wrap;
-		width: 29.7vw;
+		width: 27.4vw;
 	}
 	.col1 img{
 		padding-bottom: 40px;

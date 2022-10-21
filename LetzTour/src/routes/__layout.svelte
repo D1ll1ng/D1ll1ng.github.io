@@ -22,10 +22,9 @@
 
 <script lang="ts">
 	import Header from '$lib/components/header/Header.svelte';
+	import Footer from '$lib/components/footer/Footer.svelte';
 	import Auth from '$lib/components/auth/Auth.svelte';
-	import logo from '$lib/components//header/logo.png';
 	import '../app.css';
-	
 </script>
 
 <Header />
@@ -35,18 +34,7 @@
 	<slot /> 
 </main>
 
-<footer>
-	<div class="corner">
-		<p>Footer CUNTENTen</p>
-	</div>
-	<div>
-	</div>
-	<div class="corner">
-				<a sveltekit:prefetch href="/">
-			<img src={logo} alt="LetzTour" />
-		</a>
-	</div>
-</footer>
+<Footer/>
 
 <style>
 	main {
@@ -57,44 +45,5 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 		padding: 0;
-	}
-	footer {
-		display: flex;
-		justify-content: space-between;
-		--background: rgb(46, 46, 46);
-		background: var(--background);
-		width: 100vw;
-		color: white;
-	}
-	.corner {
-		display: flex;
-		justify-content:right;
-		margin: 2em;
-	}
-	.corner a {
-		color: white;
-		font-weight: bold;
-	}
-	.corner p {
-		display: flex;
-		align-items: left;
-		justify-content: left;
-		width: 100%;
-		height: 100%;
-		color: white;
-	}
-	.corner img {
-		width: 20em;
-		height: 3em;
-		object-fit: center;
-		justify-content: right;
-	}
-	a:hover {
-		color: var(--accent-color);
-	}
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
 	}
 </style>

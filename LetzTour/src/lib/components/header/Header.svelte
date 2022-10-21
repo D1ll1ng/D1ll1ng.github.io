@@ -4,51 +4,57 @@
 </script>
 
 <header>
-	<div class="corner">
-		<a sveltekit:prefetch href="/">
-			<img src={logo} alt="LetzTour" />
-		</a>
-	</div>
-
-	<div>
-
-	</div>
-
-	<div class="corner">
-		<nav>
-
-			<ul>
-				<li class:active={$page.url.pathname === '/book'}>
-					<a sveltekit:prefetch href="/book">Book</a>
-				</li>
-				<li class:active={$page.url.pathname === '/om'}>
-					<a sveltekit:prefetch href="/om">Om</a>
-				</li>
-				<li class:active={$page.url.pathname === '/kontakt'}>
-					<a sveltekit:prefetch href="/kontakt">Kontakt</a>
-				</li>
-				<li class:active={$page.url.pathname === '/login'}>
-					<a sveltekit:prefetch href="/login">Login</a>
-				</li>
-				{#if $session.user}
-					<li class:active={$page.url.pathname === '/counter'}>
-						<a sveltekit:prefetch href="/counter">Counter</a>
+	<div class="container-header">
+		<div class="corner">
+			<a sveltekit:prefetch href="/">
+				<img src={logo} alt="LetzTour" />
+			</a>
+		</div>
+	
+		<div>
+	
+		</div>
+	
+		<div class="corner">
+			<nav>
+	
+				<ul>
+					<li class:active={$page.url.pathname === '/book'}>
+						<a sveltekit:prefetch href="/book">Book</a>
 					</li>
-					<li class:active={$page.url.pathname === '/todos'}>
-						<a sveltekit:prefetch href="/todos">Todos</a>
+					<li class:active={$page.url.pathname === '/om'}>
+						<a sveltekit:prefetch href="/om">Om</a>
 					</li>
-				{/if}
-			</ul>
-		</nav>
+					<li class:active={$page.url.pathname === '/kontakt'}>
+						<a sveltekit:prefetch href="/kontakt">Kontakt</a>
+					</li>
+					<li class:active={$page.url.pathname === '/login'}>
+						<a sveltekit:prefetch href="/login">Login</a>
+					</li>
+					{#if $session.user}
+						<li class:active={$page.url.pathname === '/counter'}>
+							<a sveltekit:prefetch href="/counter">Counter</a>
+						</li>
+						<li class:active={$page.url.pathname === '/todos'}>
+							<a sveltekit:prefetch href="/todos">Todos</a>
+						</li>
+					{/if}
+				</ul>
+			</nav>
+		</div>
 	</div>
 </header>
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
 		--background: rgba(255, 255, 255, 1);
 		background: var(--background);
+	}
+	.container-header{
+		display: flex;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 	.corner {
 		width: 4em;
