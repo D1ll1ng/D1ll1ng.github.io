@@ -73,6 +73,7 @@
 		margin: 40px 0;
 	}
 	h2 {
+		font-family: 'Fugaz One', cursive;
 		display: block;
 		font-size: 1em;
 		color: #3A798C;

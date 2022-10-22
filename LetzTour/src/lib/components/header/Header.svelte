@@ -49,6 +49,7 @@
 	header {
 		--background: rgba(255, 255, 255, 1);
 		background: var(--background);
+		font-family: 'Poppins', sans-serif;
 	}
 	.container-header{
 		display: flex;

@@ -43,6 +43,7 @@
 		padding-bottom: 40px;
 	}
 	.col1 h2{
+		font-family: 'Fugaz One', cursive;
 		text-align: right;
 		color: white;
 		font-size: 4em;

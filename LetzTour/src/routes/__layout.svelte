@@ -37,7 +37,10 @@
 <Footer/>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 	main {
+		font-family: 'Poppins', sans-serif;
 		flex-direction: column;
 		padding: 1rem;
 		width: 100vw;

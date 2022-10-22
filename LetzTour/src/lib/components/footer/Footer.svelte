@@ -22,6 +22,7 @@
 		background: linear-gradient(94deg, #408fa6 0%, #325b6a 100%);
 		width: 100vw;
 		color: white;
+		font-family: 'Poppins', sans-serif;
 	}
 	.container-footer{
 		display: flex;

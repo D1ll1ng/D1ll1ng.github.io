@@ -45,6 +45,8 @@
 		color: white;
 		margin-top: 0;
 		padding: 20px 0;
+		font-family: 'Fugaz One', cursive;
+
 	}
 	.hero form {
 		display: flex;
