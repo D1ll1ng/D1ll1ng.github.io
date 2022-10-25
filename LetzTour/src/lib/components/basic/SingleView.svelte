@@ -3,7 +3,7 @@
 		<h2>
 			Dublin Tur
 		</h2>
-		<p >Her er en kort tisser af vores smeller fede dublin tur!</p> 
+		<p >Her er en kort tisser af vores smellerfede dublin tur!</p> 
 		<div class="SingleProductImages-Big">
 			<img loading="lazy" style="width:512px; height:512px;" src="/media/dublin-square02.webp" alt="facsade of a nice old building">
 		</div>
@@ -18,6 +18,7 @@
 		</div>
 	</div>
 </section>
+
 <style>
     section {
 		display: flex;
@@ -38,6 +39,7 @@
 		justify-content: right;
 		flex-wrap: wrap;
 		width: 27.4vw;
+		text-align: right;
 	}
 	.col1 img{
 		padding-bottom: 40px;
@@ -52,7 +54,7 @@
 	}
 	.col1 p{
 		padding: 0 0 1em 0;
-		font-size: 1.2em;
+		font-size: 1.1em;
 		color: white;
 		margin: 0 20px 0 0;
 	}

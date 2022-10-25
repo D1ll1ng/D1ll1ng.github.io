@@ -5,14 +5,11 @@
 		<h1>Klar på en fantastisk heretur?</h1>
 		<p>Søg her og få forslag på hereture… Tilpas din søgning og lav der perfekt til din gruppe</p>
 		<form action="post">
-			<div class="HeroformfirstRow" >
+			<div class="HeroFormInput" >
 				<input type="input" name="lokation" id="">
 				<input type="date" name="Dato" id="">
 				<input type="input" name="Antal personer" id="">
 				<input type="search" name="søg" id="">
-				<br/><br/>
-			</div>
-			<div class="HeroformSecondRow" >
 				<input type="btn" name="Kultu" id="">
 				<input type="btn" name="Fest" id="">
 				<input type="btn" name="Aktiv" id="">
@@ -43,21 +40,26 @@
 	}
 	.hero h1, .hero p{
 		color: white;
-		margin-top: 0;
-		padding: 20px 0;
+		margin: 0;
+		padding: 0;
 		font-family: 'Fugaz One', cursive;
-
+	}
+	.hero h1{
+		font-size: 3.2em;
+		padding:  90px 0 0 0;
+	}
+	.hero p{
+		font-size: 1.2em;
+		padding:  0 0 60px 0;
 	}
 	.hero form {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		width: 90vw;
+		max-width: 900px;
 		
 	}
-	.HeroformfirstRow{
-		width: 100%;
-	}
-	.HeroformSecondRow{
-		width: 100%;
+	.hero form div{
+		display: flex;
+		flex-wrap: wrap;
+    	justify-content: center;
 	}
 </style>
