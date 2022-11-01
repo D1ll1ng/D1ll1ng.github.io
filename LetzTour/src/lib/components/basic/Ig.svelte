@@ -1,2 +1,9 @@
-<div class="elfsight-app-009b882b-eca3-4935-a09d-78935d5dd30f"></div>
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<!-- Place <div> tag where you want the feed to appear -->
+    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div><!-- The Javascript can be moved to the end of the html page before the </body> tag --><script type="text/javascript">
+        /* curator-feed-default-feed-layout */
+        (function(){
+        var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+        i.src="https://cdn.curator.io/published/c0ba8c1a-448b-4993-8b3d-1acd88f009ee.js";
+        e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+        })();
+        </script>
