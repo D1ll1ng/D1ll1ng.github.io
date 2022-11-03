@@ -15,7 +15,7 @@
 	import type { Count } from '$lib/models/Count';
 	import Hero from '$lib/components/basic/Hero.svelte';
 	import SingleView from '$lib/components/basic/SingleView.svelte';
-	import Ig from '$lib/components/basic/Ig.svelte';
+	import ImageSeries from '$lib/components/basic/ImageSeries.svelte';
 	export let counterData: Partial<Count>;
 </script>
 
@@ -60,7 +60,7 @@
 			<p>Jens Jensen <br> En kraftig mand</p>
 		</span>
 </section>
-<Ig/>
+<ImageSeries/>
 
 <style>
 	section {
