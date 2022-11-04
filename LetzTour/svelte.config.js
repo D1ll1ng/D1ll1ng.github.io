@@ -9,15 +9,13 @@ const config = {
 
 	kit: {
 		adapter: adapter()
+	},
+	vitePlugin: {
+		experimental: {
+		  useVitePreprocess: true
+		}
 	}
 };
 
-/*export default {
-	vitePlugin: {
-	  experimental: {
-		useVitePreprocess: true
-	  }
-	}
-  };*/
 
 export default config;
